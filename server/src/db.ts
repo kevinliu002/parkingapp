@@ -1,10 +1,12 @@
 import Database from 'better-sqlite3';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { mkdirSync } from 'fs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const dataDir = process.env.DATA_DIR ?? path.join(__dirname, '../../');
+mkdirSync(dataDir, { recursive: true });
 const db = new Database(path.join(dataDir, 'parking.db'));
 
 db.exec(`
