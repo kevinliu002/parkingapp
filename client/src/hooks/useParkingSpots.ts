@@ -19,12 +19,11 @@ export function useParkingSpots() {
       .finally(() => setLoading(false));
   }, []);
 
-  const addSpot = useCallback(async (payload: CreateSpotPayload) => {
+  const addSpot = useCallback(async (payload: CreateSpotPayload): Promise<void> => {
     const spot = await createSpot(payload);
     setSpots((prev) => [spot, ...prev]);
     setPendingPin(null);
     setSelectedSpotId(spot.id);
-    return spot;
   }, []);
 
   const removeSpot = useCallback(async (id: number) => {
