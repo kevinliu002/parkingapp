@@ -7,13 +7,12 @@
     "start": "tsx src/index.ts"
   },
   "dependencies": {
-    "better-sqlite3": "^11.0.0",
+    "@libsql/client": "^0.14.0",
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.12",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.0.0",

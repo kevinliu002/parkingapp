@@ -13,10 +13,8 @@ COPY server/package*.json ./server/
 RUN cd server && npm install
 COPY server/ ./server/
 RUN cd server && npx tsc
-RUN mkdir -p /data
 
 ENV NODE_ENV=production
-ENV DATA_DIR=/data
 
 EXPOSE 3000
 ENV PORT=3000
