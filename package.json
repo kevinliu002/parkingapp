@@ -1,0 +1,10 @@
+{
+  "name": "parking-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "cd server && npm install && node_modules/.bin/tsx src/index.ts",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev"
+  }
+}
