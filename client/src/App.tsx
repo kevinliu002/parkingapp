@@ -97,7 +97,7 @@ export default function App() {
         onDeleteSpot={removeSpot}
         onEditSpot={setEditingSpot}
         searchCenter={searchCenter}
-        onSavePublicSpot={addSpot}
+        onSavePublicSpot={(payload) => addSpot(payload).then(() => {})}
         mapRef={mapRef}
       />
 
